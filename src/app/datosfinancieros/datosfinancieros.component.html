@@ -1,0 +1,141 @@
+<div class="container mt-4" *ngIf="datos">
+  <div class="row">
+    <!-- Tarjeta de datos nacionales -->
+    <div class="col-lg-6">
+      <div class="card mb-4">
+        <div class="card-header">
+          Nacional
+        </div>
+        <div class="card-body">
+          <table class="table table-light table-striped">
+            <thead class="thead-custom">
+            <tr>
+              <th>Nombre</th>
+              <th>Código</th>
+              <th>Unidad de Medida</th>
+              <th>Fecha</th>
+              <th>Valor</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>{{ datos.uf.nombre }}</td>
+              <td>{{ datos.uf.codigo }}</td>
+              <td>{{ datos.uf.unidad_medida }}</td>
+              <td>{{ datos.uf.fecha | date:'dd/MM/yyyy' }}</td>
+              <td>{{ datos.uf.valor | number:'1.2-2' }}</td>
+            </tr>
+            <tr>
+              <td>{{ datos.ivp.nombre }}</td>
+              <td>{{ datos.ivp.codigo }}</td>
+              <td>{{ datos.ivp.unidad_medida }}</td>
+              <td>{{ datos.ivp.fecha | date:'dd/MM/yyyy' }}</td>
+              <td>{{ datos.ivp.valor | number:'1.2-2' }}</td>
+            </tr>
+            <tr>
+              <td>{{ datos.ipc.nombre }}</td>
+              <td>{{ datos.ipc.codigo }}</td>
+              <td>{{ datos.ipc.unidad_medida }}</td>
+              <td>{{ datos.ipc.fecha | date:'dd/MM/yyyy' }}</td>
+              <td>{{ datos.ipc.valor | number:'1.2-2' }}%</td>
+            </tr>
+            <tr>
+              <td>{{ datos.utm.nombre }}</td>
+              <td>{{ datos.utm.codigo }}</td>
+              <td>{{ datos.utm.unidad_medida }}</td>
+              <td>{{ datos.utm.fecha | date:'dd/MM/yyyy' }}</td>
+              <td>{{ datos.utm.valor | number:'1.2-2' }}</td>
+            </tr>
+            <tr>
+              <td>{{ datos.imacec.nombre }}</td>
+              <td>{{ datos.imacec.codigo }}</td>
+              <td>{{ datos.imacec.unidad_medida }}</td>
+              <td>{{ datos.imacec.fecha | date:'dd/MM/yyyy' }}</td>
+              <td>{{ datos.imacec.valor | number:'1.2-2' }}%</td>
+            </tr>
+            <tr>
+              <td>{{ datos.tpm.nombre }}</td>
+              <td>{{ datos.tpm.codigo }}</td>
+              <td>{{ datos.tpm.unidad_medida }}</td>
+              <td>{{ datos.tpm.fecha | date:'dd/MM/yyyy' }}</td>
+              <td>{{ datos.tpm.valor | number:'1.2-2' }}%</td>
+            </tr>
+            <tr>
+              <td>{{ datos.libra_cobre.nombre }}</td>
+              <td>{{ datos.libra_cobre.codigo }}</td>
+              <td>{{ datos.libra_cobre.unidad_medida }}</td>
+              <td>{{ datos.libra_cobre.fecha | date:'dd/MM/yyyy' }}</td>
+              <td>{{ datos.libra_cobre.valor | number:'1.2-2' }}</td>
+            </tr>
+            <tr>
+              <td>{{ datos.tasa_desempleo.nombre }}</td>
+              <td>{{ datos.tasa_desempleo.codigo }}</td>
+              <td>{{ datos.tasa_desempleo.unidad_medida }}</td>
+              <td>{{ datos.tasa_desempleo.fecha | date:'dd/MM/yyyy' }}</td>
+              <td>{{ datos.tasa_desempleo.valor | number:'1.2-2' }}%</td>
+            </tr>
+            <tr>
+              <td>{{ datos.bitcoin.nombre }}</td>
+              <td>{{ datos.bitcoin.codigo }}</td>
+              <td>{{ datos.bitcoin.unidad_medida }}</td>
+              <td>{{ datos.bitcoin.fecha | date:'dd/MM/yyyy' }}</td>
+              <td>{{ datos.bitcoin.valor | number:'1.2-2' }}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de datos internacionales -->
+    <div class="col-lg-6">
+      <div class="card mb-4">
+        <div class="card-header">
+          Internacional
+        </div>
+        <div class="card-body">
+          <table class="table table-light table-striped">
+            <thead class="thead-custom">
+            <tr>
+              <th>Nombre</th>
+              <th>Código</th>
+              <th>Unidad de Medida</th>
+              <th>Fecha</th>
+              <th>Valor</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>{{ datos.dolar.nombre }}</td>
+              <td>{{ datos.dolar.codigo }}</td>
+              <td>{{ datos.dolar.unidad_medida }}</td>
+              <td>{{ datos.dolar.fecha | date:'dd/MM/yyyy' }}</td>
+              <td>{{ datos.dolar.valor | number:'1.2-2' }}</td>
+            </tr>
+            <tr>
+              <td>{{ datos.dolar_intercambio.nombre }}</td>
+              <td>{{ datos.dolar_intercambio.codigo }}</td>
+              <td>{{ datos.dolar_intercambio.unidad_medida }}</td>
+              <td>{{ datos.dolar_intercambio.fecha | date:'dd/MM/yyyy' }}</td>
+              <td>{{ datos.dolar_intercambio.valor | number:'1.2-2' }}</td>
+            </tr>
+            <tr>
+              <td>{{ datos.euro.nombre }}</td>
+              <td>{{ datos.euro.codigo }}</td>
+              <td>{{ datos.euro.unidad_medida }}</td>
+              <td>{{ datos.euro.fecha | date:'dd/MM/yyyy' }}</td>
+              <td>{{ datos.euro.valor | number:'1.2-2' }}</td>
+            </tr>
+            </tbody>
+          </table>
+          <div class="card-body">
+            <app-pie-chart></app-pie-chart>
+            <div class="card-body">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

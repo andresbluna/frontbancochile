@@ -1,0 +1,66 @@
+html, body {
+  background-color: #000 !important;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.table-container {
+  margin-top: 2rem;
+}
+
+.table-dark {
+  background-color: #ffffff; /* Fondo blanco para la tabla */
+}
+
+.table th {
+  color: #000000; /* Color negro para el texto del encabezado */
+  font-size: 0.875rem; /* Letra más pequeña */
+  border-right: none; /* Sin líneas divisoras verticales en el encabezado */
+}
+
+.table td {
+  color: #000000; /* Color negro para los detalles */
+  font-size: 0.875rem; /* Letra más pequeña */
+  border-right: 1px solid #ccc; /* Línea divisoria gris entre columnas */
+}
+
+.thead-custom {
+  background-color: #273880; /* Color del encabezado */
+}
+
+.table thead th {
+  background-color: #273880; /* Color del encabezado */
+  color: #fff; /* Color del texto del encabezado */
+  border-right: none; /* Sin líneas divisoras verticales en el encabezado */
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #ccc; /* Línea divisoria gris entre filas */
+}
+
+.table tbody tr:last-child {
+  border-bottom: none; /* Quitar la línea divisoria del último elemento */
+}
+
+.table td:last-child {
+  border-right: none; /* Quitar la línea divisoria del último elemento */
+}
+
+.card {
+  background-color: #ffffff; /* Fondo blanco para las tarjetas */
+  color: #000; /* Color del texto en las tarjetas */
+  border: 1px solid #ddd; /* Borde similar al estilo del Banco de Chile */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+.card-header {
+  background-color: #273880; /* Color del encabezado de la tarjeta */
+  color: #fff;
+  font-weight: bold; /* Negrita para el encabezado */
+}
+
+.card-body {
+  color: #000; /* Color del texto en el cuerpo de la tarjeta */
+}

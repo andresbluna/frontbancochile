@@ -1,0 +1,53 @@
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.header-animated {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #273880;
+  padding: 1rem;
+}
+
+.header-animated .logo {
+  max-width: 200px;
+  height: auto;
+  animation: fadeInRight 1.5s ease-in-out;
+}
+
+.header-animated .divider {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  width: 100%;
+  margin: 1rem 0;
+  animation: fadeInLeft 1.5s ease-in-out; /* Delay to start after logo animation */
+}
+
+.header-animated .title {
+  color: #fff;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  animation: fadeInLeft 1.5s ease-in-out;
+}
