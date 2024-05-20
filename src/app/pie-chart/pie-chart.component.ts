@@ -1,5 +1,8 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Chart } from 'chart.js/auto';
+import { DataService} from "../ufservice.service";
+import { UfData} from "../interface/interfaceuf";
+
 
 @Component({
   selector: 'app-pie-chart',
@@ -11,31 +14,40 @@ export class PieChartComponent implements OnInit, AfterViewInit {
   public chart1: any;
   public chart2: any;
 
+  constructor(private dataService: DataService) {}
+
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.createChart('MyChart1', [300, 50, 100, 40, 120, 80]);
-    this.createChart('MyChart2', [200, 150, 80, 60, 90, 70]);
+    this.dataService.getUfData().subscribe((data: UfData) => {
+      const labels = data.serie.map(item =>
+        new Date(item.fecha).toLocaleDateString());
+      const values = data.serie.map(item => item.valor);
+
+      this.createChart('MyChart1', labels, values);
+      this.createChart('MyChart2', labels, values);
+    });
   }
 
-  createChart(chartId: string, data: number[]) {
+  createChart(chartId: string, labels: string[], data:
+    number[]) {
     const ctx = document.getElementById(chartId) as HTMLCanvasElement | null;
     if (ctx) {
       new Chart(ctx, {
-        type: 'pie',
+        type: 'line',
         data: {
-          labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+          labels: labels,
           datasets: [{
             label: 'UF',
             data: data,
-            backgroundColor: [
-              '#273880', // Azul oscuro
-              '#1E3A8A', // Azul medio
-              '#3B82F6', // Azul claro
-              '#FFFFFF', // Blanco
-              '#E5E7EB', // Gris claro
-              '#10B981'  // Verde
-            ]
+            borderColor: '#3e95cd',
+            fill: false,
+            pointBackgroundColor: '#3e95cd',
+            pointBorderColor: '#3e95cd',
+            pointHoverBackgroundColor: '#3e95cd',
+            pointHoverBorderColor: '#3e95cd',
+            pointRadius: 2, // Ajusta el tamaño de los puntos
+            pointHoverRadius: 7 // Ajusta el tamaño de los puntos al pasar el ratón
           }]
         },
         options: {
@@ -45,6 +57,16 @@ export class PieChartComponent implements OnInit, AfterViewInit {
           plugins: {
             legend: {
               position: 'bottom', // Ajusta la posición de la leyenda
+            }
+          },
+          scales: {
+            x: {
+              beginAtZero: true
+            },
+            y: {
+              min: 37000,
+              max: 38000, 
+              beginAtZero: false
             }
           }
         }
