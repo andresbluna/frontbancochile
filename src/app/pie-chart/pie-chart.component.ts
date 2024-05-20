@@ -65,7 +65,7 @@ export class PieChartComponent implements OnInit, AfterViewInit {
             },
             y: {
               min: 37000,
-              max: 38000, 
+              max: 38000,
               beginAtZero: false
             }
           }

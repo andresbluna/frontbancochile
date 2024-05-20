@@ -11,56 +11,65 @@ html, body {
 }
 
 .table-dark {
-  background-color: #ffffff; /* Fondo blanco para la tabla */
+  background-color: #ffffff;
 }
 
 .table th {
-  color: #000000; /* Color negro para el texto del encabezado */
-  font-size: 0.875rem; /* Letra más pequeña */
-  border-right: none; /* Sin líneas divisoras verticales en el encabezado */
+  color: #000000;
+  font-size: 0.875rem;
+  border-right: none;
 }
 
 .table td {
-  color: #000000; /* Color negro para los detalles */
-  font-size: 0.875rem; /* Letra más pequeña */
-  border-right: 1px solid #ccc; /* Línea divisoria gris entre columnas */
+  color: #000000;
+  font-size: 0.875rem;
+  border-right: 1px solid #ccc;
 }
 
 .thead-custom {
-  background-color: #273880; /* Color del encabezado */
+  background-color: #273880;
 }
 
 .table thead th {
-  background-color: #273880; /* Color del encabezado */
-  color: #fff; /* Color del texto del encabezado */
-  border-right: none; /* Sin líneas divisoras verticales en el encabezado */
+  background-color: #273880;
+  color: #fff;
+  border-right: none;
 }
 
 .table tbody tr {
-  border-bottom: 1px solid #ccc; /* Línea divisoria gris entre filas */
+  border-bottom: 1px solid #ccc;
 }
 
 .table tbody tr:last-child {
-  border-bottom: none; /* Quitar la línea divisoria del último elemento */
+  border-bottom: none;
 }
 
 .table td:last-child {
-  border-right: none; /* Quitar la línea divisoria del último elemento */
+  border-right: none;
 }
 
 .card {
-  background-color: #ffffff; /* Fondo blanco para las tarjetas */
-  color: #000; /* Color del texto en las tarjetas */
-  border: 1px solid #ddd; /* Borde similar al estilo del Banco de Chile */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-  background-color: #273880; /* Color del encabezado de la tarjeta */
+  background-color: #273880;
   color: #fff;
-  font-weight: bold; /* Negrita para el encabezado */
+  font-weight: bold;
 }
 
 .card-body {
-  color: #000; /* Color del texto en el cuerpo de la tarjeta */
+  color: #000;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.flex-fill {
+  flex: 1 1 auto;
+}
+

@@ -4,16 +4,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: -350px;
 }
 
 .canvas-wrapper {
   width: 100%;
-  max-width: 400px; /* Ajusta el tamaño máximo del contenedor */
+  max-width: 400px;
   height: 201px;
-  box-sizing: border-box; /* Asegura que el tamaño del canvas incluya el padding y el borde */
+  box-sizing: content-box;
 }
 
 canvas {
-  width: 100%; /* Ajusta el ancho del canvas al 100% del contenedor */
-  height: 400px; /* Ajusta la altura del canvas */
+  width: 100%;
+  height: 600px;
 }

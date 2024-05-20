@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+// error.component.ts
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-errorcomponent',
+  selector: 'app-error',
+  template: `
+    <div>
+      <img src="src/assets/error_img.webp" alt="Error">
+      <p>{{ message }}</p>
+    </div>
+  `,
   standalone: true,
-  imports: [],
-  templateUrl: './errorcomponent.component.html',
-  styleUrl: './errorcomponent.component.scss'
 })
-export class ErrorcomponentComponent {
-
+export class ErrorComponent {
+  @Input() message: string;
 }
